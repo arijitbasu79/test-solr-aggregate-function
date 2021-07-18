@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.solr.client.solrj.impl.LBHttpSolrClient"/>
+    <fullyQualifiedTypeName name="org.apache.solr.client.solrj.impl.LBHttpSolrClient.Builder"/>
+    <fullyQualifiedTypeName name="org.apache.solr.client.solrj.SolrQuery"/>
+    <fullyQualifiedTypeName name="org.apache.solr.client.solrj.response.QueryResponse"/>
+    <fullyQualifiedTypeName name="org.apache.solr.client.solrj.SolrServerException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+</qualifiedTypeNameHistroy>

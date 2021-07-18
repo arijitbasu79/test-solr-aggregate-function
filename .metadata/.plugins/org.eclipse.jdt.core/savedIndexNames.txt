@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+D:\workspace\Solr\.metadata\.plugins\org.eclipse.jdt.core
+4159592999.index
+316414584.index
+446047068.index
+4287711252.index
+3640378491.index
+2212089721.index
+3041056448.index
+886915370.index
+3819537108.index
+1184760725.index
+2047853833.index
+2996315344.index
+1996194256.index
+1026266427.index
+3396718482.index
+3635947319.index
+2885219511.index
+1529522181.index

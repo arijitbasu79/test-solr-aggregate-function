@@ -1,0 +1,38 @@
+import java.io.IOException;
+
+import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.impl.LBHttpSolrClient;
+import org.apache.solr.client.solrj.response.QueryResponse;
+
+public class SolrAggregateRunner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		final LBHttpSolrClient solrClient = new LBHttpSolrClient.Builder()
+				.withBaseSolrUrl("http://localhost:8983/solr/employee").build();
+		
+		SolrQuery query = new SolrQuery();
+		query.setQuery("attendence:[19 TO *");
+		query.add("stats.field","sal");
+		query.set("stat", "true");
+		query.setRows(0);
+		
+		QueryResponse response;
+		try {
+			response = solrClient.query(query);
+			System.out.println("Response in String ::"+response.toString());
+			System.out.println("Max Salary ::"+response.getFieldStatsInfo().get("sal").getMax().toString());
+			System.out.println("Min Salary ::"+response.getFieldStatsInfo().get("sal").getMin().toString());
+			System.out.println("Count of Employee whose attendence >19 ::"+response.getFieldStatsInfo().get("sal").getCount().toString());
+		}
+		catch (SolrServerException e) {
+			e.printStackTrace();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
